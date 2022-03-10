@@ -1,0 +1,56 @@
+﻿@page
+@model ApartmentRental.Pages.Apartments.CreateModel
+@{
+}
+
+<h2 class="text-info">Create New Offer</h2>
+<div class="border container" style="padding:30px">
+    <form method="post"  enctype="multipart/form-data">>
+        <table class="table table-striped border">
+        <tr class="table-secondary">
+                    <th> <label> Number of rooms</label> </th>
+                    <th> <label> Number of bathrooms </label> </th>
+                    <th> <label> House area </label> </th>
+                    <th> <label> Is kitchen separate room? </label> </th>
+                    <th> <label> Are pets allowed? </label> </th>
+                    <th> <label> Short description </label> </th>
+                    <th> <label> Image path </label> </th>
+                </tr>
+
+        <tr>
+            <td> <input type="text" asp-for="numberOfRooms" class="form-control" /> </td>
+            <td> <input type="text" asp-for="numberOfBathrooms" class="form-control" /> </td>
+            <td> <input type="text" asp-for="area" class="form-control" /> </td>
+            <td> <input type="text" asp-for="isKitchenSeparate" class="form-control" /> </td>
+            <td> <input type="text" asp-for="arePetsAllowed" class="form-control" /> </td>
+            <td> <input type="text" asp-for="shortDescription" class="form-control" /> </td>
+            <td>
+
+                <input type="file" id="file1" 
+                name="file1" 
+                multiple="multiple" />
+ 
+            </td>
+            <!--<td> <input type="text" asp-for="imgaePath" class="form-control" /> </td>-->
+        </tr>
+        </table>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="MyProfile" class="btn btn-success form-control">Back to Profile</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<!--
+asp-action="UploadImage" 
+                asp-controller="Home"
+
+                             <form  
+                method="post" 
+                enctype="multipart/form-data">
+                           </form>
+-->

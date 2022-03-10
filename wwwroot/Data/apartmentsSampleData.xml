@@ -1,0 +1,30 @@
+<aList>
+<apartment>
+<numberOfRooms> 6 </numberOfRooms>
+<numberOfBathrooms> 2 </numberOfBathrooms>
+<area> 170 </area>
+<isKitchenSeparateRoom>true </isKitchenSeparateRoom>
+<arePetsAllowed> true </arePetsAllowed> 
+<imagePath> C:\Users\smola\source\repos\ApartmentRental\Images\house1 </imagePath>
+</apartment>
+
+<apartment>
+<numberOfRooms> 4 </numberOfRooms>
+<numberOfBathrooms> 1 </numberOfBathrooms>
+<area> 120 </area>
+<isKitchenSeparateRoom>true </isKitchenSeparateRoom>
+<arePetsAllowed> false </arePetsAllowed> 
+<imagePath> C:\Users\smola\source\repos\ApartmentRental\Images\house2 </imagePath>
+</apartment>
+
+<apartment>
+<numberOfRooms> 3 </numberOfRooms>
+<numberOfBathrooms> 1 </numberOfBathrooms>
+<area> 70 </area>
+<isKitchenSeparateRoom>false </isKitchenSeparateRoom>
+<arePetsAllowed> true </arePetsAllowed> 
+<imagePath> C:\Users\smola\source\repos\ApartmentRental\Images\flat1 </imagePath>
+</apartment>
+</aList>
+
+

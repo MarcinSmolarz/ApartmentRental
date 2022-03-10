@@ -1,0 +1,62 @@
+﻿@page
+@model ApartmentRental.Pages.Apartments.ApartmentsListModel
+@{
+}
+@using ApartmentRental.Helpers
+<title>@ViewData["Title"] - ApartmentList</title>
+
+
+<div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (Model.Apartments.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <th>
+                            <label asp-for="Apartments.FirstOrDefault().numberOfRooms"> Number of rooms </label>
+                        </th>
+                        <th>
+                            <label asp-for="Apartments.FirstOrDefault().numberOfBathrooms"> Number of bathrooms </label>
+                        </th>
+                        <th>
+                            <label asp-for="Apartments.FirstOrDefault().area"> Area (m²) </label>
+                        </th>
+                        <th>
+                            <label asp-for="Apartments.FirstOrDefault().isKitchenSeparateRoom"> Kitchen is separate </label>
+                        </th>
+                        <th>
+                            <label asp-for="Apartments.FirstOrDefault().arePetsAllowed"> Pets are allowed </label>
+                        </th>
+                        <th> <label>Image</label> </th>
+                    </tr>
+                    @foreach (var item in Model.Apartments)
+                    { 
+                        <tr>
+                            <td style="text-align: center; vertical-align: middle;">
+                                @Html.DisplayFor(m => item.numberOfRooms)
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                @Html.DisplayFor(m => item.numberOfBathrooms)
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;"> 
+                                @Html.DisplayFor(m => item.area)
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                @Html.DisplayFor(m => item.isKitchenSeparateRoom)
+                            </td>
+                            <td style="text-align: center; vertical-align: middle;">
+                                @Html.DisplayFor(m => item.arePetsAllowed)
+                            </td> 
+                             <td>   
+                               @Html.Image(item.image)
+                             </td>
+                        </tr> 
+                    }
+                </table>
+            }
+            else
+            {
+                <p>You have no offesrs posted. Why not creating one?</p>
+            }
+        </form>
+    </div>

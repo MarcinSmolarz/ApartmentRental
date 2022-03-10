@@ -1,0 +1,54 @@
+﻿@page
+@model ApartmentRental.Pages.Apartments.EditModel
+@{
+}
+
+<h2 class="text-info">Edit Offer</h2>
+<div class="border container" style="padding:30px">
+    <form method="post">
+        <input type="hidden" asp-for="Apartment.Id" />
+        <table class="table table-striped border">
+        <tr class="table-secondary">
+                    <th> <label> Number of Rooms</label> </th>
+                    <th> <label> Number of Bathrooms </label> </th>
+                    <th> <label> House area </label> </th>
+                    <th> <label> Is Kitchen Separate Room? </label> </th>
+                    <th> <label> Are Pest Allowed? </label> </th>
+                    <th> <label> Short Description </label> </th>
+                    <th> <label> Image Path </label> </th>
+                </tr>
+
+        <tr>
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="numberOfRooms" class="form-control" /> </td>
+            <!--</div>-->
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="numberOfBathrooms" class="form-control" /> </td>
+            <!--</div>-->
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="area" class="form-control" /> </td>
+            <!--</div>-->
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="isKitchenSeparate" class="form-control" /> </td>
+            <!--</div>-->
+           <!-- <div class="form-group row">-->
+            <td> <input type="text" asp-for="arePetsAllowed" class="form-control" /> </td>
+            <!--</div>-->
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="shortDescription" class="form-control" /> </td>
+            <!--</div>-->
+            <!--<div class="form-group row">-->
+            <td> <input type="text" asp-for="image" class="form-control" /> </td>
+            <!--</div>-->
+        </tr>
+        </table>
+        <div class="form-group row">
+            <div class="col-3 offset-3">
+                <input type="submit" value="Create" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-page="MyOffers" class="btn btn-success form-control">Back to Offers</a>
+            </div>
+        </div>
+    </form>
+</div>
